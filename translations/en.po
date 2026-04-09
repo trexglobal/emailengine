@@ -88,10 +88,16 @@ msgid "Insufficient Permissions"
 msgstr ""
 
 #: views/oauth-scope-error.hbs:8
-msgid "The following permissions were not granted:"
+msgid ""
+"We couldn't connect your email because the required permissions were not "
+"granted."
 msgstr ""
 
-#: views/oauth-scope-error.hbs:20
+#: views/oauth-scope-error.hbs:11
+msgid "Please allow all requested permissions during sign-in to continue."
+msgstr ""
+
+#: views/oauth-scope-error.hbs:17
 msgid "What's missing & how to fix this?"
 msgstr ""
 
