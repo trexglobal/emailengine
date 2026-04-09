@@ -1,29 +1,62 @@
-<div class="text-center">
-    <h1 class="h4 text-gray-900 mb-4">{{_ "Insufficient Permissions" templateLocale}}</h1>
+<div class='text-center'>
+    <h1 class='h4 text-gray-900 mb-4'>{{_ 'Insufficient Permissions' templateLocale}}</h1>
 </div>
 
-<div class="mb-4">
-    <div class="alert alert-danger">
-        <i class="fas fa-exclamation-triangle mr-2"></i>
-        {{_ "All requested permissions are required for this service to function properly. Some required permissions were not granted during sign-in." templateLocale}}
+<div class='mb-4'>
+    <div class='alert alert-danger'>
+        {{#if missingScopesList}}
+            <p class='font-weight-bold mb-2'>
+                <i class='fas fa-exclamation-triangle mr-2'></i>{{_ 'The following permissions were not granted:' templateLocale}}
+            </p>
+            <ul class='mb-0'>
+                {{#each missingScopesList}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}
     </div>
 
-    {{#if missingScopesList}}
-    <p class="font-weight-bold mb-2">{{_ "The following permissions were not granted:" templateLocale}}</p>
-    <ul class="mb-3">
-        {{#each missingScopesList}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
-    {{/if}}
+    <div class='scope-error-fix d-flex flex-wrap mt-4'>
+        <div class='scope-error-fix-text'>
+            <h5 class='mb-3'>{{_ "What's missing & how to fix this?" templateLocale}}</h5>
 
-    <p class="text-muted">
-        {{_ "Please try again and make sure all permission checkboxes are selected on the Google consent screen." templateLocale}}
-    </p>
+            <p>
+                {{_ 'Please check/select the required permission checkbox on the Google access screen to grant email access.' templateLocale}}
+            </p>
+
+            <h5 class='mt-4 mb-3'>{{_ 'Steps:' templateLocale}}</h5>
+
+            <ol class='mb-4'>
+                <li class='mb-2'>
+                    {{_ 'Click' templateLocale}}
+                    <strong>{{_ 'Try Again' templateLocale}}</strong>
+                </li>
+                <li class='mb-2'>
+                    {{_ 'On the "Access to your Google Account" screen' templateLocale}}
+                    <br />
+                    <strong>{{_ 'Click Continue' templateLocale}}</strong>
+                </li>
+                <li class='mb-2'>
+                    {{_ 'On the "Grant access to your Google Account" screen' templateLocale}}
+                    <br />
+                    <strong>{{_ 'Check/select all required permission checkboxes' templateLocale}}</strong>
+                    <br />
+                    <strong>{{_ 'Click Continue' templateLocale}}</strong>
+                </li>
+            </ol>
+        </div>
+        <div class='scope-error-fix-img d-flex align-items-center'>
+            <img
+                src='/static/images/google-auth.gif'
+                alt='{{_ "How to grant Google permissions" templateLocale}}'
+                class='img-fluid rounded shadow-sm'
+            />
+        </div>
+    </div>
 </div>
 
-<div class="mt-4">
-    <a href="{{reAuthUrl}}" class="btn btn-primary btn-block">
-        <i class="fas fa-redo mr-2"></i>{{_ "Try Again" templateLocale}}
+<div class='mt-4'>
+    <a href='{{reAuthUrl}}' class='btn btn-primary btn-block'>
+        <i class='fas fa-redo mr-2'></i>{{_ 'Try Again' templateLocale}}
     </a>
 </div>

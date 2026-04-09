@@ -88,22 +88,48 @@ msgid "Insufficient Permissions"
 msgstr ""
 
 #: views/oauth-scope-error.hbs:8
-msgid ""
-"All requested permissions are required for this service to function properly. "
-"Some required permissions were not granted during sign-in."
-msgstr ""
-
-#: views/oauth-scope-error.hbs:12
 msgid "The following permissions were not granted:"
 msgstr ""
 
-#: views/oauth-scope-error.hbs:21
-msgid ""
-"Please try again and make sure all permission checkboxes are selected on the "
-"Google consent screen."
+#: views/oauth-scope-error.hbs:20
+msgid "What's missing & how to fix this?"
 msgstr ""
 
-#: views/oauth-scope-error.hbs:27
+#: views/oauth-scope-error.hbs:23
+msgid ""
+"Please check/select the required permission checkbox on the Google access "
+"screen to grant email access."
+msgstr ""
+
+#: views/oauth-scope-error.hbs:26
+msgid "How to grant Google permissions"
+msgstr ""
+
+#: views/oauth-scope-error.hbs:29
+msgid "Steps:"
+msgstr ""
+
+#: views/oauth-scope-error.hbs:32
+msgid "Click"
+msgstr ""
+
+#: views/oauth-scope-error.hbs:35
+msgid "On the \"Access to your Google Account\" screen"
+msgstr ""
+
+#: views/oauth-scope-error.hbs:37
+msgid "Click Continue"
+msgstr ""
+
+#: views/oauth-scope-error.hbs:40
+msgid "On the \"Grant access to your Google Account\" screen"
+msgstr ""
+
+#: views/oauth-scope-error.hbs:42
+msgid "Check/select all required permission checkboxes"
+msgstr ""
+
+#: views/oauth-scope-error.hbs:50
 msgid "Try Again"
 msgstr ""
 

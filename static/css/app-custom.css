@@ -1,0 +1,307 @@
+/* SimplifyEm theme overrides - loaded after app.css to avoid upstream merge conflicts */
+
+:root {
+    --primary: #3880ff;
+    --blue: #3880ff;
+    --secondary: #3dc2ff;
+    --success: #79c42e;
+    --info: #3dc2ff;
+    --warning: #ffc409;
+    --danger: #eb445a;
+    --dark: #222428;
+    --light: #f4f5f8;
+}
+
+.bg-gradient-primary {
+    background-color: #042B49 !important;
+    background-image: none !important;
+    background-size: cover !important;
+}
+
+.bg-gradient-secondary {
+    background-color: #3dc2ff !important;
+    background-image: linear-gradient(180deg, #3dc2ff 10%, #36abe0 100%) !important;
+    background-size: cover !important;
+}
+
+a {
+    color: #3880ff;
+}
+
+a:hover {
+    color: #3171e0;
+}
+
+.btn-primary {
+    color: #fff;
+    background: linear-gradient(to right, #F7A834, #F58021);
+    border: none;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background: linear-gradient(to right, #e89a2b, #e0741d);
+    border: none;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #fff;
+    background: linear-gradient(to right, #e89a2b, #e0741d);
+    border: none;
+    box-shadow: 0 0 0 0.2rem rgba(245, 128, 33, 0.45);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: #fff;
+    background: linear-gradient(to right, #F7A834, #F58021);
+    border: none;
+    opacity: 0.65;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background: linear-gradient(to right, #d98d26, #cc6b1a);
+    border: none;
+}
+
+.btn-secondary {
+    color: #F58021;
+    background: transparent;
+    border: 1px solid #F58021;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background: linear-gradient(to right, #F7A834, #F58021);
+    border: 1px solid transparent;
+}
+
+.btn-secondary:focus,
+.btn-secondary.focus {
+    color: #F58021;
+    background: transparent;
+    border: 1px solid #F58021;
+    box-shadow: 0 0 0 0.2rem rgba(245, 128, 33, 0.35);
+}
+
+.btn-secondary.disabled,
+.btn-secondary:disabled {
+    color: #F58021;
+    background: transparent;
+    border: 1px solid #F58021;
+    opacity: 0.65;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+    color: #fff;
+    background: linear-gradient(to right, #e89a2b, #e0741d);
+    border: 1px solid transparent;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #79c42e;
+    border-color: #79c42e;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #6aac28;
+    border-color: #63a225;
+}
+
+.btn-success:focus,
+.btn-success.focus {
+    color: #fff;
+    background-color: #6aac28;
+    border-color: #63a225;
+    box-shadow: 0 0 0 0.2rem rgba(121, 196, 46, 0.45);
+}
+
+.btn-warning {
+    color: #000;
+    background-color: #ffc409;
+    border-color: #ffc409;
+}
+
+.btn-warning:hover {
+    color: #000;
+    background-color: #e0ac08;
+    border-color: #d4a207;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #eb445a;
+    border-color: #eb445a;
+}
+
+.btn-danger:hover {
+    color: #fff;
+    background-color: #cf3c4f;
+    border-color: #c4394b;
+}
+
+.text-primary {
+    color: #3880ff !important;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+    color: #3171e0 !important;
+}
+
+.text-secondary {
+    color: #3dc2ff !important;
+}
+
+a.text-secondary:hover,
+a.text-secondary:focus {
+    color: #36abe0 !important;
+}
+
+.bg-primary {
+    background-color: #3880ff !important;
+}
+
+.bg-secondary {
+    background-color: #3dc2ff !important;
+}
+
+.badge-primary {
+    color: #fff;
+    background-color: #3880ff;
+}
+
+.badge-secondary {
+    color: #fff;
+    background-color: #3dc2ff;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: #79c42e;
+}
+
+.badge-warning {
+    color: #000;
+    background-color: #ffc409;
+}
+
+.badge-danger {
+    color: #fff;
+    background-color: #eb445a;
+}
+
+.border-left-primary {
+    border-left-color: #3880ff !important;
+}
+
+.border-left-secondary {
+    border-left-color: #3dc2ff !important;
+}
+
+.border-left-success {
+    border-left-color: #79c42e !important;
+}
+
+.border-left-warning {
+    border-left-color: #ffc409 !important;
+}
+
+.border-left-danger {
+    border-left-color: #eb445a !important;
+}
+
+.page-link {
+    color: #3880ff;
+}
+
+.page-item.active .page-link {
+    color: #fff;
+    background-color: #3880ff;
+    border-color: #3880ff;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    background-color: #3880ff;
+}
+
+.list-group-item.active {
+    color: #fff;
+    background-color: #3880ff;
+    border-color: #3880ff;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #3880ff;
+}
+
+.form-control:focus {
+    border-color: #4c8dff;
+    box-shadow: 0 0 0 0.2rem rgba(56, 128, 255, 0.25);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #3880ff;
+    background-color: #3880ff;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(56, 128, 255, 0.28);
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #4c8dff;
+}
+
+.alert-success {
+    color: #3d6417;
+    background-color: #e3f4d0;
+    border-color: #d5eebb;
+}
+
+.alert-warning {
+    color: #856504;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-danger {
+    color: #78232e;
+    background-color: #fbd5da;
+    border-color: #f9c0c7;
+}
+
+/* Widen the public layout card so side-by-side content fits */
+body.bg-gradient-primary > .container {
+    max-width: 1400px;
+}
+
+body.bg-gradient-primary > .container .col-xl-10 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* OAuth scope error page - side-by-side text and GIF */
+.scope-error-fix-text {
+    flex: 1 1 280px;
+    min-width: 0;
+    padding-right: 1.5rem;
+}
+
+.scope-error-fix-img {
+    flex: 1 1 280px;
+    min-width: 0;
+}
