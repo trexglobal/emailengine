@@ -12,42 +12,12 @@
         </p>
     </div>
 
-    <div class='scope-error-fix d-flex flex-wrap mt-4'>
-        <div class='scope-error-fix-text'>
-            <h5 class='mb-3'>{{_ "What's missing & how to fix this?" templateLocale}}</h5>
-
-            <p>
-                {{_ 'Please check/select the required permission checkbox on the Google access screen to grant email access.' templateLocale}}
-            </p>
-
-            <h5 class='mt-4 mb-3'>{{_ 'Steps:' templateLocale}}</h5>
-
-            <ol class='mb-4'>
-                <li class='mb-2'>
-                    {{_ 'Click' templateLocale}}
-                    <strong>{{_ 'Try Again' templateLocale}}</strong>
-                </li>
-                <li class='mb-2'>
-                    {{_ 'On the "Access to your Google Account" screen' templateLocale}}
-                    <br />
-                    <strong>{{_ 'Click Continue' templateLocale}}</strong>
-                </li>
-                <li class='mb-2'>
-                    {{_ 'On the "Grant access to your Google Account" screen' templateLocale}}
-                    <br />
-                    <strong>{{_ 'Check/select all required permission checkboxes' templateLocale}}</strong>
-                    <br />
-                    <strong>{{_ 'Click Continue' templateLocale}}</strong>
-                </li>
-            </ol>
-        </div>
-        <div class='scope-error-fix-img d-flex align-items-center'>
-            <img
-                src='/static/images/google-auth.gif'
-                alt='{{_ "How to grant Google permissions" templateLocale}}'
-                class='img-fluid rounded shadow-sm'
-            />
-        </div>
+    <div class='text-center mt-4'>
+        <img
+            src='/static/images/google-auth.gif'
+            alt='{{_ "How to grant Google permissions" templateLocale}}'
+            class='scope-error-gif rounded shadow-sm'
+        />
     </div>
 </div>
 

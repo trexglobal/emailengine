@@ -294,14 +294,9 @@ body.bg-gradient-primary > .container .col-xl-10 {
     max-width: 100%;
 }
 
-/* OAuth scope error page - side-by-side text and GIF */
-.scope-error-fix-text {
-    flex: 1 1 280px;
-    min-width: 0;
-    padding-right: 1.5rem;
-}
-
-.scope-error-fix-img {
-    flex: 1 1 280px;
-    min-width: 0;
+/* OAuth scope error page - centered GIF */
+.scope-error-gif {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
 }
