@@ -1,29 +1,28 @@
-<div class="text-center">
-    <h1 class="h4 text-gray-900 mb-4">{{_ "Insufficient Permissions" templateLocale}}</h1>
+<div class='text-center'>
+    <h1 class='h4 text-gray-900 mb-4'>{{_ 'Insufficient Permissions' templateLocale}}</h1>
 </div>
 
-<div class="mb-4">
-    <div class="alert alert-danger">
-        <i class="fas fa-exclamation-triangle mr-2"></i>
-        {{_ "All requested permissions are required for this service to function properly. Some required permissions were not granted during sign-in." templateLocale}}
+<div class='mb-4'>
+    <div class='alert alert-danger'>
+        <p class='font-weight-bold mb-1'>
+            <i class='fas fa-exclamation-triangle mr-2'></i>{{_ "We couldn't connect your email because the required permissions were not granted." templateLocale}}
+        </p>
+        <p class='mb-0'>
+            {{_ 'Please allow all requested permissions during sign-in to continue.' templateLocale}}
+        </p>
     </div>
 
-    {{#if missingScopesList}}
-    <p class="font-weight-bold mb-2">{{_ "The following permissions were not granted:" templateLocale}}</p>
-    <ul class="mb-3">
-        {{#each missingScopesList}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
-    {{/if}}
-
-    <p class="text-muted">
-        {{_ "Please try again and make sure all permission checkboxes are selected on the Google consent screen." templateLocale}}
-    </p>
+    <div class='text-center mt-4'>
+        <img
+            src='/static/images/google-auth.gif'
+            alt='{{_ "How to grant Google permissions" templateLocale}}'
+            class='scope-error-gif rounded shadow-sm'
+        />
+    </div>
 </div>
 
-<div class="mt-4">
-    <a href="{{reAuthUrl}}" class="btn btn-primary btn-block">
-        <i class="fas fa-redo mr-2"></i>{{_ "Try Again" templateLocale}}
+<div class='mt-4'>
+    <a href='{{reAuthUrl}}' class='btn btn-primary btn-block'>
+        <i class='fas fa-redo mr-2'></i>{{_ 'Try Again' templateLocale}}
     </a>
 </div>

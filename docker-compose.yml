@@ -8,10 +8,12 @@ name: emailengine
 services:
     emailengine:
         restart: ${RESTART_POLICY:-unless-stopped}
-        image: postalsys/emailengine:${EMAILENGINE_VERSION:-latest}
+        build:
+            context: .
+            dockerfile: Dockerfile
         ports:
             # API and web interface
-            - '${EMAILENGINE_API_BIND:-127.0.0.1}:${EMAILENGINE_API_PORT:-3000}:3000'
+            - '${EMAILENGINE_API_BIND:-127.0.0.1}:${EMAILENGINE_API_PORT:-3005}:3000'
             # SMTP for message submission
             - '${EMAILENGINE_SMTP_BIND:-127.0.0.1}:${EMAILENGINE_SMTP_PORT:-2525}:2525'
             # IMAP proxy
@@ -38,6 +40,10 @@ services:
             EENGINE_LOG_LEVEL: ${EENGINE_LOG_LEVEL:-info}
             EENGINE_WORKERS: ${EENGINE_WORKERS:-4}
 
+        volumes:
+            - ./views:/emailengine/views
+            - ./static:/emailengine/static
+            - ./translations:/emailengine/translations
         healthcheck:
             test: ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://localhost:3000/health']
             interval: ${HEALTHCHECK_INTERVAL:-30s}

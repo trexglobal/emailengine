@@ -89,21 +89,19 @@ msgstr ""
 
 #: views/oauth-scope-error.hbs:8
 msgid ""
-"All requested permissions are required for this service to function properly. "
-"Some required permissions were not granted during sign-in."
+"We couldn't connect your email because the required permissions were not "
+"granted."
 msgstr ""
 
-#: views/oauth-scope-error.hbs:12
-msgid "The following permissions were not granted:"
+#: views/oauth-scope-error.hbs:11
+msgid "Please allow all requested permissions during sign-in to continue."
 msgstr ""
 
-#: views/oauth-scope-error.hbs:21
-msgid ""
-"Please try again and make sure all permission checkboxes are selected on the "
-"Google consent screen."
+#: views/oauth-scope-error.hbs:17
+msgid "How to grant Google permissions"
 msgstr ""
 
-#: views/oauth-scope-error.hbs:27
+#: views/oauth-scope-error.hbs:23
 msgid "Try Again"
 msgstr ""
 
@@ -133,8 +131,8 @@ msgstr ""
 msgid "Choose your email account provider"
 msgstr ""
 
-#: views/accounts/register/index.hbs:15
-msgid "Standard IMAP"
+#: views/accounts/register/index.hbs:44
+msgid "Other Email Providers"
 msgstr ""
 
 #: views/accounts/register/imap-server.hbs:19
